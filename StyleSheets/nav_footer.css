@@ -1,0 +1,65 @@
+
+/* ------- NAVBAR + LOGO ------- */
+.logo {
+    float: left;
+    padding: 5px;
+}
+
+nav {
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0); /* RGB color with alpha (transparency) */
+    float: right; /* Move the navigation bar to the right */
+}
+
+li {
+    float: left; /* Display list items horizontally */
+}
+
+li a {
+    display: block;
+    color: #204231;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* ------- FOOTER ------- */
+.footer {
+    background-color: #99A18C;
+    padding: 20px 0;
+    text-align: center;
+    color: #FEF4EB;
+}
+
+.footer .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #FEF4EB;
+    text-decoration: underline;
+}
+
+.footer .tel {
+    color: #FEF4EB;
+    font-weight: bold;
+}
+
+.footer .related-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #204231;
+    text-decoration: underline;
+}
+
+.footer .related-links a:last-child {
+    margin-right: 0;
+}
+
