@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <!--
-To push to github you must commit 1st then push: 
-1. right click portfolio
-2. click git
-3. click commit...
-4. and commit
-5. repeat steps 1 & 2
-6. click remote
-7. click push...
-8. and push 
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
 -->
 <html>
     <head>
+        <title>Personal Name Card Design 2</title>
         <meta charset="UTF-8">
-        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="StyleSheets/nav_footer.css"> 
+        <!-- Link the CSS file -->
+        <link rel="stylesheet" href="StyleSheets/nav_footer.css">
         <style>
             body {
                 background-color: #F2EFDF;
@@ -32,18 +28,14 @@ To push to github you must commit 1st then push:
                 font-weight: normal;
                 font-style: normal;
             }
-            p{
-                font-family: "Raleway";
-            }
-            .center-text {
+            
+            .title{
                 text-align: center;
+                font-weight: bold;
+                color: #99A18C;
             }
-
-            h1{
-                font-size: 100px;
-            }
-
-            .center-content {
+            
+            .xd {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -51,21 +43,26 @@ To push to github you must commit 1st then push:
                 max-width: 100%; /* Set maximum width for the container */
             }
 
-            .center-content img {
+            .pic {
                 margin-right: 20px; /* Add some spacing between the image and text */
             }
 
-            .center-content p {
+            .desc {
                 text-align: left;
                 word-wrap: break-word; /* Wrap long words to the next line */
                 font-family: "Raleway";
                 width: 500px;
-                padding-right: 25px;
+            }
+            
+            .namecard-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 20px; /* Adjust the margin as needed */
             }
 
-            h2{
-                text-align: left;
-                font-weight: bold;
+            .namecard-container .pic {
+                margin-bottom: 10px; /* Adjust the spacing between the images */
             }
             
             .nav ul ul {
@@ -113,52 +110,31 @@ To push to github you must commit 1st then push:
         <!--------------------------------------------------------------------------------------------------------------------->
         
         
-        <!------------------------------------------------ BRANDING + TAGLINE ------------------------------------------------->
-        <div class="center-text">
-            <br/><br/><br/>
-            <h1>SherLabs</h1>
-            <h4>Crafting Digital Dreams<br/>with Imagination and Code</h4>
-        </div>
-        <br/><br/><br/><br/><br/><br/><br/>
-        <!---------------------------------------------------------------------------------------------------------------------->
+        <div class="title">
+            <h1>Digital Illustration</h1>
+        </div><br/><br/>
         
         
-        <!-------------------------------------------------------- INTRO ------------------------------------------------------->
-        <div class="center-content">
-            <img class="pic" src="Images/pic.jpg" alt="PIC" width="300">
-            <div class="intro">
-                <h2>Introduction</h2>
-                <p>Hi, I'm Shernice, a Digital Design and  
-                    Development student at Republic Polytechnic. My passion lies at the intersection of coding 
-                    and UI/UX design, where I craft digital experiences that seamlessly blend functionality 
-                    with aesthetic appeal. Through my portfolio, I invite you to explore my journey in creating 
-                    user-centered, visually engaging solutions that bridge the gap between technology and design. 
-                    Welcome to my \world of innovation and creativity!</p>
+        <!------------------------------------------------------ NAMECARD ----------------------------------------------------->
+        <div class="xd">
+            <div class="namecard-container">
+                <img class="pic" src="Images/beeCardFront.jpg" alt="Front" height="187">
+                <img class="pic" src="Images/cardBeeBack.png" alt="Back" height="200">
             </div>
-        </div>
-        <br/><br/><br/><br/><br/>
-        <!---------------------------------------------------------------------------------------------------------------------->
-        
-        <!-------------------------------------------------------- BUNNY ------------------------------------------------------->
-        <div class="center-content">
-            
-            <div class="intro">
-                <h2>My Logo Inspiration</h2>
+            <div class="desc">
+                <h3>Personal Name Card</h3>
                 <p>
-                    This is Oreo, She is the inspiration of my personal logo. Other than having a pet Rabbit, another reason why 
-                    I chose to include a rabbit in my logo is because, rabbits are often associated with speed and responsiveness. 
-                    Just as rabbits swiftly navigate their environment, my logo communicates your ability to create responsive and 
-                    user-friendly designs. Additionally, the rabbit's symbolism of resourcefulness aligns with the innovative 
-                    problem-solving techniques required in the field, making it a fitting inspiration for my personal brand. 
+                    I created this name card because I felt that my previous one was too simple and not eye-catching. 
+                    Compared to my previous design, this unique bee design attracts attention and is more memorable. <br/><br/>
+                    
+                    This was done using Adobe Illustrator.<br/>
                 </p>
             </div>
-            <img class="pic" src="Images/bun.jpg" alt="PIC" width="300">
         </div>
-        <br/><br/><br/><br/>
         <!---------------------------------------------------------------------------------------------------------------------->
         
         
-        <!------------------------------------------------------- FOOTER ------------------------------------------------------->
+        <!------------------------------------------------------- FOOTER ---------------------------------------------------------->
         <br/><br/>
         <footer class="footer">
             <div class="social-media">
@@ -175,6 +151,6 @@ To push to github you must commit 1st then push:
                 <a href="contactMe.html">Contact Me</a>
             </div>
         </footer>
-        <!---------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------------>
     </body>
 </html>
