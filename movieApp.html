@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Movie List Mobile Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Link the CSS file -->
+        <link rel="stylesheet" href="StyleSheets/nav_footer.css">
+        <style>
+            body {
+                background-color: #F2EFDF;
+                padding: 20px;
+                font-family: 'The Seasons', sans-serif;
+                color: #204231;
+            }
+            
+            @font-face {
+                font-family: 'The Seasons';
+                src: url('Fonts/Fontspring-DEMO-theseasons-reg.otf') format('opentype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            
+            .title{
+                text-align: center;
+                font-weight: bold;
+                color: #99A18C;
+            }
+            
+            .xd {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                max-width: 100%; /* Set maximum width for the container */
+            }
+
+            .pic {
+                margin-right: 20px; /* Add some spacing between the image and text */
+            }
+
+            .desc {
+                text-align: left;
+                word-wrap: break-word; /* Wrap long words to the next line */
+                font-family: "Raleway";
+                width: 500px;
+            }
+            
+            .nav ul ul {
+                display: none;
+                background-color: #fff;
+            }
+
+            .nav ul li:hover > ul {
+                display: block;
+            }
+
+            .nav ul ul li {
+                width: 200px;
+                float: none;
+                display: list-item;
+                position: relative;
+            }
+
+            .nav ul ul ul li {
+                position: relative;
+                top: -60px;
+                left: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--------------------------------------------------- LOGO + NAVBAR --------------------------------------------------->
+        <img class="logo" src="Images/logo.png" alt="LOGO" width="90">
+        <nav class="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li class="dropdown">
+                    <a href="works.html" class="dropbtn">My Works</a>
+                    <ul class="dropdown-content">
+                        <li><a href="appWebDesign.html">Mobile Application and Website Design</a></li>
+                        <li><a href="illustrationDesign.html">Digital Illustrations and Designs</a></li>
+                        <li><a href="codedWebApps.html">Coded Websites and Applications</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+            </ul>
+        </nav>
+        <br/>
+        <!--------------------------------------------------------------------------------------------------------------------->
+        
+        <div class="title">
+            <h1>Coded Website</h1>
+        </div><br/><br/>
+        
+        
+        <!------------------------------------------------------ Movie Reviews Website ----------------------------------------------------->
+        <div class="xd">
+            <img class="pic" src="Images/movieListApp.jpg" alt="PIC" width="260">
+            <div class="desc">
+                <h3>Movie List Mobile Application</h3>
+                <p>
+                    This website was coded using Java on Android Studio. It allows users to insert movies and the movie 
+                    details (e.g genre, rating, title). It then collates all the movies that the user has inserted and shows it to the user 
+                    in a list form. The user is also able to edit and delete movies. It also filters out all PG13 and below movies for the user.
+                    
+                    <br/><br/>
+                    
+                    Link to <a href="https://files.fm/u/n6ygnkmzu4#/view/rywx79bymg">Video of Application</a>.
+                </p>
+            </div>
+        </div>
+        <!---------------------------------------------------------------------------------------------------------------------->
+        
+        
+        <!------------------------------------------------------- FOOTER ---------------------------------------------------------->
+        <br/><br/>
+        <footer class="footer">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/shernice-ong-232261239/">LinkedIn</a>
+                <a href="https://www.instagram.com/oxnshernice/">Instagram</a>
+            </div><br/>
+            <div class="contact-info">
+                <p>For inquiries, call me at <span class="tel">8683 2577</span></p>
+            </div>
+            <div class="related-links">
+                <a href="home.html">Home</a>
+                <a href="aboutMe.html">About Me</a>
+                <a href="works.html">My Works</a>
+                <a href="contactMe.html">Contact Me</a>
+            </div>
+        </footer>
+        <!------------------------------------------------------------------------------------------------------------------------>
+    </body>
+</html>
