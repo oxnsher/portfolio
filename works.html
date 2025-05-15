@@ -68,6 +68,18 @@ To push to github you must commit 1st then push:
             .ai img {
                 margin-right: 20px; /* Add some spacing between the image and text */
             }
+
+            .vr {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                max-width: 100%; /* Set maximum width for the container */
+            }
+
+            .vr img {
+                margin-right: 20px; /* Add some spacing between the image and text */
+            }
             
             .desc1 {
                 text-align: left;
@@ -171,6 +183,39 @@ To push to github you must commit 1st then push:
             }
             
             
+
+            .articles-containervr {
+                display: flex;
+                justify-content: space-around;
+                padding: 20px;
+                flex-wrap: wrap;
+            }
+
+            .articlevr {
+                width: 30%;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+                max-width: 280px;
+                text-align: center;
+            }
+
+            .articlevr img {
+                height: 100%; /* Make the image responsive to its container width */
+                max-height: 150px; /* Set a maximum width for the image */
+                border-radius: 5px;
+                margin-bottom: 15px;
+                
+            }
+
+            .articlevr h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+
             
             
             .articles-containercode {
@@ -406,6 +451,24 @@ To push to github you must commit 1st then push:
         </section><br/>
         <!--------------------------------------------------------------------------------------------------------------------->
         
+        <!------------------------------------------------ VR GAME --------------------------------------------------->
+        <div class="center-content">
+            <div class="title">
+                <h1>Virtual Reality Game</h1>
+            </div>
+        </div><br/>
+        
+        <section class="articles-containervr">
+            <article class="articlevr">
+                <h2>Horror Escape Room</h2>
+                <img class="pic" src="Images/vr.jpg" alt="PIC">
+                <a href="escapeVR.html">
+                    <button>View Description</button>
+                </a>
+        </section><br/>
+        <!--------------------------------------------------------------------------------------------------------------------->
+        
+
         <!------------------------------------------------ MORE --------------------------------------------------->
         <div class="center-content">
             <div class="title">
