@@ -13,7 +13,7 @@ To push to github you must commit 1st then push:
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Coded Websites and Applications</title>
+        <title>Virtual Reality Games</title>
         <link rel="icon" type="Images/logo.png" href="Images/logo.png">
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -66,6 +66,18 @@ To push to github you must commit 1st then push:
             }
 
             .ai img {
+                margin-right: 20px; /* Add some spacing between the image and text */
+            }
+
+            .vr {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                max-width: 100%; /* Set maximum width for the container */
+            }
+
+            .vr img {
                 margin-right: 20px; /* Add some spacing between the image and text */
             }
             
@@ -171,6 +183,39 @@ To push to github you must commit 1st then push:
             }
             
             
+
+            .articles-containervr {
+                display: flex;
+                justify-content: space-around;
+                padding: 20px;
+                flex-wrap: wrap;
+            }
+
+            .articlevr {
+                width: 30%;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+                max-width: 280px;
+                text-align: center;
+            }
+
+            .articlevr img {
+                height: 100%; /* Make the image responsive to its container width */
+                max-height: 150px; /* Set a maximum width for the image */
+                border-radius: 5px;
+                margin-bottom: 15px;
+                
+            }
+
+            .articlevr h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+
             
             
             .articles-containercode {
@@ -273,53 +318,22 @@ To push to github you must commit 1st then push:
         <br/>
         <!--------------------------------------------------------------------------------------------------------------------->
         
-        
-        <!------------------------------------------------ APP & WEB DESIGN --------------------------------------------------->
+        <!------------------------------------------------ VR GAME --------------------------------------------------->
         <div class="center-content">
             <div class="title">
-                <h1>Functional Websites and Applications</h1>
+                <h1>Virtual Reality Games</h1>
             </div>
         </div><br/>
         
-        <section class="articles-containercode">
-            <article class="articlecode">
-                <h2>Renovation Business Website</h2>
-                <img class="pic" src="Images/fyp.jpg" alt="PIC">
-                <a href="fyp.html">
+        <section class="articles-containervr">
+            <article class="articlevr">
+                <h2>Horror Escape Room</h2>
+                <img class="pic" src="Images/vr.jpg" alt="PIC">
+                <a href="escapeVR.html">
                     <button>View Description</button>
                 </a>
-            </article>
-            <article class="articlecode">
-                <h2>Movie Reviews Website</h2>
-                <img class="pic" src="Images/web.png" alt="PIC">
-                <a href="movie.html">
-                    <button>View Description</button>
-                </a>
-            </article>
-            <article class="articlecode">
-                <h2>Travel Company Website</h2>
-                <img class="pic" src="Images/CodedTravelWeb.jpeg" alt="PIC" width="240">
-                <a href="codedTravelWeb.html">
-                    <button>View Description</button>
-                </a>
-            </article>
-            <article class="articlecode">
-                <h2>School of Infocomm Webpage</h2>
-                <img class="pic" src="Images/soiWeb.jpeg" alt="PIC" width="240">
-                <a href="soiWeb.html">
-                    <button>View Description</button>
-                </a>
-            </article>
-            <article class="articlecode">
-                <h2>Movie Collection App</h2>
-                <img class="pic" src="Images/movieListApp.jpg" alt="PIC"width="190">
-                <a href="movieApp.html">
-                    <button>View Description</button>
-                </a>
-            </article>
         </section><br/>
         <!--------------------------------------------------------------------------------------------------------------------->
-        
         
         <!------------------------------------------------------- FOOTER ------------------------------------------------------->
         <br/><br/>
