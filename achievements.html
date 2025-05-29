@@ -145,6 +145,34 @@ To push to github you must commit 1st then push:
                 text-align: left;
             }
 
+            .testimonial-img {
+                max-width: 400px;
+                width: 100%;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+
+            .fullscreen-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: auto;
+                border-radius: 0;
+                z-index: 1001;
+            }
+
+            .fullscreen-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.95);
+                z-index: 1000;
+                overflow: auto;
+            }
         </style>
     </head>
     <body>
@@ -285,42 +313,78 @@ To push to github you must commit 1st then push:
         </div><br/><br/><br/>
         <!--------------------------------------------------------------------------------------------------------------------->
         
-
-        <!--------------------------------------------------TESTIMONIALS------------------------------------------------------->
+        <!----------------------------------------------- TESTIMONIALS CAROUSEL ----------------------------------------------->
         <div class="brand-story">
-            <h3>Testimonials</h3><br/>
-            <p><b>Singapore Institute of Directors</b></p>
-            <p>
-                This testimonial from my supervisor at the Singapore Institute of Directors highlights my 
-                professionalism, adaptability, and strong analytical skills during my UI/UX internship. It 
-                acknowledges my contributions to UI/UX proposals, digital content development, and data management, 
-                reflecting my ability to learn quickly and work effectively in a team.
-            </p>
-            <div class="testimonial-container" style="display: flex; gap: 20px; justify-content: center; align-items: center;">
-                <div class="testimonial-image">
-                    <img src="Images/SIDTestimonial.jpg" alt="Testimonial 2" style="width: 485px; height: auto; border-radius: 10px;">
-                </div>
-            </div><br/><br/>
+            <h3>Testimonials</h3>
+            <p style="font-size: 0.9rem; font-style: italic;">
+                *Click on the image to open in fullscreen. Click anywhere to return.
+            </p><br/>
             
-            <p><b>Pasir Ris Crest Secondary School</b></p>
-            <p>
-                This testimonial from my teachers at Pasir Ris Crest Secondary School acknowledges my hard work, 
-                dedication, and commitment. Their recognition reflects the effort I put into my 
-                academic journey and the growth I experienced throughout my time at the school.
-            </p>
-            <div class="testimonial-container" style="display: flex; gap: 20px; justify-content: center; align-items: center;">
-                <div class="testimonial-image">
-                    <img src="Images/SecSchTestimonial.jpg" alt="Testimonial 1" style="width: 485px; height: auto; border-radius: 10px;">
-                </div>
-                <div class="testimonial-image">
-                    <img src="Images/SecSchTestimonialContd.jpg" alt="Testimonial 2" style="width: 485px; height: auto; border-radius: 10px;">
-                </div>
-            </div>
-            
-        </div><br/><br/>
-        <!--------------------------------------------------------------------------------------------------------------------->
-    
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
 
+                    <!-- Slide 1: SID Testimonial -->
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center text-center px-3">
+                            <p><b>Singapore Institute of Directors</b></p>
+                            <p style="max-width: 800px;">
+                                This testimonial from my supervisor at the Singapore Institute of Directors highlights my 
+                                professionalism, adaptability, and strong analytical skills during my UI/UX internship. It 
+                                acknowledges my contributions to UI/UX proposals, digital content development, and data management, 
+                                reflecting my ability to learn quickly and work effectively in a team.
+                            </p>
+                            <img src="Images/SIDTestimonial.jpg" alt="SID Testimonial" class="img-fluid testimonial-img">
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Pasir Ris Crest Secondary School Testimonial -->
+                     <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center text-center px-3">
+                            <p><b>Pasir Ris Crest Secondary School</b></p>
+                            <p style="max-width: 800px;">
+                                This testimonial from my teachers at Pasir Ris Crest Secondary School acknowledges my hard work, 
+                                dedication, and commitment. Their recognition reflects the effort I put into my 
+                                academic journey and the growth I experienced throughout my time at the school.
+                            </p>
+                            <img src="Images/SecSchTestimonial.jpg" alt="PRCSS Testimonial" class="img-fluid testimonial-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <script>
+        document.querySelectorAll('.testimonial-img').forEach(img => {
+            img.addEventListener('click', () => {
+            const overlay = document.createElement('div');
+            overlay.classList.add('fullscreen-overlay');
+
+            const fullImg = document.createElement('img');
+            fullImg.src = img.src;
+            fullImg.classList.add('fullscreen-img');
+
+            overlay.appendChild(fullImg);
+            document.body.appendChild(overlay);
+
+            overlay.addEventListener('click', () => {
+                document.body.removeChild(overlay);
+            });
+            });
+        });
+        </script>
+        <!--------------------------------------------------------------------------------------------------------------------->
+
+        
         <!------------------------------------------------------- FOOTER ------------------------------------------------------->
         <br/><br/>
         <footer class="footer">
